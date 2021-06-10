@@ -3,6 +3,7 @@ class OrbitzFlightSearchResultsPage
 
   include PageObject
   include UtilitiesModule
+  include UtilitiesModule
 
   ul(:all_flights_results, id: 'flightModuleList')
   ul(:all_flights_results_new, data_test_id:'listings')

@@ -30,14 +30,14 @@ class OrbitzHomePage
 
 
   def get_all_error_message
-    error_messages_elements.map(&:text)
+    # error_messages_elements.map(&:text)
 
-    #
-    # all_errors = []
-    # error_messages.each do |each_error|
-    #   all_errors << each_error.text
-    # end
-    # all_errors
+
+    all_errors = []
+    error_messages.each do |each_error|
+      all_errors << each_error.text
+    end
+    all_errors
   end
   #RAM GADDE
   def choose_dep_airport city_name, airport_code
