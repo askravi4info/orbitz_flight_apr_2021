@@ -8,7 +8,6 @@ class OrbitzFlightSearchResultsPage
   ul(:all_flights_results, id: 'flightModuleList')
   ul(:all_flights_results_new, data_test_id:'listings')
   div(:flight_results_title, class: 'title-date-rtv')
-  div(:flight_results_title, class: 'title-date-rtv')
 
 
 
@@ -16,8 +15,12 @@ class OrbitzFlightSearchResultsPage
     all_flights_results_element.list_item_elements.count
   end
 
+  fdsafds
+ffdsafdsf
+  fafdasfsaf
 
-f
+
+  fsadfs
   asf
   dsa
   f
