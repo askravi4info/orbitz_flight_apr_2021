@@ -15,15 +15,7 @@ class OrbitzFlightSearchResultsPage
     all_flights_results_element.list_item_elements.count
   end
 
-  fdsafds
-ffdsafdsf
-  fafdasfsaf
 
-
-  fsadfs
-  asf
-  dsa
-  f
 
 
 
