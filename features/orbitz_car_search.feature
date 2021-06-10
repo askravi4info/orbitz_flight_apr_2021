@@ -4,14 +4,8 @@ Feature: Car Search functionality
     Given user is on the orbitz homepage
     When user selects cars tab
 
-    d
-    f
-    dasf
-
-    fds
-Scenario Outline: f
-  daf
-  saf
-  ds
-  ds
-  fsdf
+Scenario Outline: ffdfafaf
+  Given user is on the orbitz homepage
+  When user selects cars tab
+  Examples:
+  |||
