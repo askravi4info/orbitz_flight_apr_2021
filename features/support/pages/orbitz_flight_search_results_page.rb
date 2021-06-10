@@ -17,10 +17,6 @@ class OrbitzFlightSearchResultsPage
   end
 
 
-f
-  asf
-  dsa
-  f
 
 
 
