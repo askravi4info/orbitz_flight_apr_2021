@@ -1,0 +1,3 @@
+class OrbitzCarsSearchResultsPage
+
+end

@@ -1,10 +1,8 @@
 class OrbitzCarSearchPage
-  fd
-  af
-  a
-  f
-  f
-  adf
-  f
+  require_relative '../modules/utilities_module'
+
+  include PageObject
+  include UtilitiesModule
+
 
 end
