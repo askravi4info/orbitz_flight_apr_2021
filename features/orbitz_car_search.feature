@@ -1,11 +1,8 @@
 Feature: Car Search functionality
 
-  Scenario: fjkdajljf
+  Scenario: verify user is able to search for the cars available
     Given user is on the orbitz homepage
-    When user selects cars tab
+    When user search for cars availability for future dates
+    Then user should see the list of cars options
 
-Scenario Outline: ffdfafaf
-  Given user is on the orbitz homepage
-  When user selects cars tab
-  Examples:
-  |||
+
