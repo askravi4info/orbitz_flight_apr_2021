@@ -44,8 +44,8 @@ class OrbitzHomePage
     leaving_from_button_element.click
     set_dep_edit_box_element.set city_name
     # self.set_dep_edit_box = city_name
-    sleep 1
-    all_dep_airports_element.list_item_elements.each do |each_airport|
+    #sleep 1
+    all_dep_airports_element.when_present.list_item_elements.each do |each_airport|
       p each_airport.text
       if each_airport.text.include? airport_code
         each_airport.click
@@ -59,8 +59,8 @@ class OrbitzHomePage
     going_to_button_element.click
     set_arr_edit_box_element.set city_name
     # self.set_arr_edit_box = city_name
-    sleep 1
-    all_arr_airports_element.list_item_elements.each do |each_airport|
+    # sleep 1
+    all_arr_airports_element.when_present.list_item_elements.each do |each_airport|
       p each_airport.text
       if each_airport.text.include? airport_code
         each_airport.click
