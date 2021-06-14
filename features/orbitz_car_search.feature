@@ -1,3 +1,3 @@
-Feature: Car Search functionality
+Feature: Orbitz Car Search functionality
 
   Scenario: fjkdajljf
