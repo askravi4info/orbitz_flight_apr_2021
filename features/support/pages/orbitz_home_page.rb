@@ -5,7 +5,7 @@ class OrbitzHomePage
   include UtilitiesModule
 
   page_url "www.orbitz.com"
-
+  page_url $url
 
   link(:select_flights_tab, class: 'uitk-tab-anchor', index: 1)
   link(:select_cars_tab, class: 'uitk-tab-anchor', index: 2)
