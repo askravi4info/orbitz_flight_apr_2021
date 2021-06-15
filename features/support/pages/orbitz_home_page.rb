@@ -4,8 +4,9 @@ class OrbitzHomePage
   include PageObject
   include UtilitiesModule
 
-  page_url "www.orbitz.com"
+  # page_url "www.orbitz.com"
   page_url $url
+
 
   link(:select_flights_tab, class: 'uitk-tab-anchor', index: 1)
   link(:select_cars_tab, class: 'uitk-tab-anchor', index: 2)
@@ -44,7 +45,7 @@ class OrbitzHomePage
     leaving_from_button_element.click
     set_dep_edit_box_element.set city_name
     # self.set_dep_edit_box = city_name
-    #sleep 1
+    # sleep 1
     all_dep_airports_element.when_present.list_item_elements.each do |each_airport|
       p each_airport.text
       if each_airport.text.include? airport_code
@@ -89,5 +90,9 @@ class OrbitzHomePage
     @browser.button(data_testid: 'submit-button').click
   end
 
+
+  def search_future_flights dep_city, dep_airport, dep_date
+
+  end
 
 end

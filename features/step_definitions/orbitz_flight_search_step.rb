@@ -44,21 +44,11 @@ end
 
 Then(/^user should see the "([^"]*)" error message$/) do |error_message|
   all_errors = on(OrbitzHomePage).get_all_error_message
-  #fail "Error Message - #{error_message} is not found in the list of errors - #{all_errors}" unless all_errors.include? error_message
-  expect(all_errors).should include error_message ###RSpec
+  # fail "Error Message - #{error_message} is not found in the list of errors - #{all_errors}" unless all_errors.include? error_message
+  expect(all_errors).should include error_message
 end
 
 When(/^user search for the available flights for the future dates$/) do
-  on(OrbitzHomePage).select_flights_tab_element.click
-  on(OrbitzHomePage).choose_round_trip_element.click
-  on(OrbitzHomePage).choose_dep_airport city_name, airport_code
-  on(OrbitzHomePage).choose_arr_airport city_name, airport_code
-  on(OrbitzHomePage).choose_dep_date 1
-  on(OrbitzHomePage).choose_arr_date 3
-  on(OrbitzHomePage).submit_button_element.click
-
-  #####Instead of abovw way we can do it in this way This is teh best way
-
   on(OrbitzHomePage) do |page|
     page.select_flights_tab_element.click
     page.choose_round_trip_element.click
@@ -68,21 +58,23 @@ When(/^user search for the available flights for the future dates$/) do
     page.choose_arr_date 3
     page.submit_button_element.click
   end
-  ###We can use this way
+
   step "user selects the flights tab"
   step "user choose round trip option"
-  step "user search for " "#{Columbus}" " city and selects " "#{CMH}" " airport for departure"
-  step "user search for " "#{Cleveland}" " city and selects " "#{CLE}" " airport for arrival"
-  step "user choose future dates for the arrival and departure dates"
-  step "search for the available flights"
-  ####Or we can use this way
+  step 'user search for "Columbus" city and selects "CMH" airport for departure'
+  step 'user search for "Cleveland" city and selects "CLE" airport for arrival'
+  step 'user choose future dates for the arrival and departure dates'
+  step 'search for the available flights'
+
+
   steps %Q{
-  When user selects the flights tab
+    When user selects the flights tab
     And user choose round trip option
     And user search for "Columbus" city and selects "CMH" airport for departure
     And user search for "Cleveland" city and selects "CLE" airport for arrival
     And user choose future dates for the arrival and departure dates
     And search for the available flights
         }
+
 
 end

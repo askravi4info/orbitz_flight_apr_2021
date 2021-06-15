@@ -9,3 +9,9 @@ end
 After do
   @browser.close
 end
+
+After do |scenario|
+  if scenario.failed?
+    @browser.screenshot("failed.jpg")
+  end
+end

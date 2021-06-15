@@ -47,6 +47,6 @@ Feature: Orbitz Flight Search functionality
     And user choose future dates for the arrival and departure dates
     And search for the available flights
     Then user should see the following error messages:
-      | fdasfdsf |
-      | fdasfdsf |
-      | fdasfdsf |
+      | To continue, please correct the 2 errors below |
+      | Please select a destination |
+      | Please select an origin |

@@ -8,12 +8,13 @@ else
   $browser_type = ENV['browser']
 end
 
+
 if ENV['env'] == nil
   environment_name = ''
 else
   environment_name = ENV['env']
 end
 
-$url= "www.orbitz#{environment_name}.com"
+$url = "www.orbitz#{environment_name}.com"
 
 World(PageObject::PageFactory)
