@@ -28,8 +28,8 @@ And(/^search for the available flights$/) do
 end
 
 Then(/^verify user should see the available flights$/) do
-  # fail "No results are found" unless on(OrbitzFlightSearchResultsPage).get_flight_results_count > 1
-  expect(on(OrbitzFlightSearchResultsPage).get_flight_results_count).should be > 1
+  #fail "No results are found" unless on(OrbitzFlightSearchResultsPage).get_flight_results_count > 1
+  expect(on(OrbitzFlightSearchResultsPage).get_flight_results_count).should be > 1 ###for Rspect
 end
 
 And(/^verify user gets the flight results for the selected dep date$/) do
