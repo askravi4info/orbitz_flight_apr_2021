@@ -9,14 +9,8 @@ class OrbitzFlightSearchResultsPage
   ul(:all_flights_results_new, data_test_id:'listings')
   div(:flight_results_title, class: 'title-date-rtv')
 
-  #ram_rg
-
-   def get_flight_results_count
-     all_flights_results_element.list_item_elements.count
+  def get_flight_results_count
+    all_flights_results_element.list_item_elements.count
   end
 
-
-
-
-
- end
+end

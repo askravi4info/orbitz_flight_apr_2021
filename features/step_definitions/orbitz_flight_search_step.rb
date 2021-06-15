@@ -49,6 +49,7 @@ Then(/^user should see the "([^"]*)" error message$/) do |error_message|
 end
 
 When(/^user search for the available flights for the future dates$/) do
+
   on(OrbitzHomePage) do |page|
     page.select_flights_tab_element.click
     page.choose_round_trip_element.click
@@ -75,6 +76,5 @@ When(/^user search for the available flights for the future dates$/) do
     And user choose future dates for the arrival and departure dates
     And search for the available flights
         }
-
 
 end
