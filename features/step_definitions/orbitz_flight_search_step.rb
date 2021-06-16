@@ -78,3 +78,18 @@ When(/^user search for the available flights for the future dates$/) do
 
 
 end
+
+When(/^user search for the available flights for the future dates with yml data$/) do
+
+  @data = YAML.load_file 'features/support/test data/test_data.yml'
+
+  on(OrbitzHomePage) do |page|
+    page.select_flights_tab_element.click
+    page.choose_round_trip_element.click
+    page.choose_dep_airport @data['dep_city_name'], @data['dep_airport_name']
+    page.choose_arr_airport @data['arr_city_name'], @data['arr_airport_name']
+    page.choose_dep_date 1
+    page.choose_arr_date 3
+    page.submit_button_element.click
+  end
+  end
