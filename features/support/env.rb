@@ -1,6 +1,8 @@
 require 'rspec'
 require 'page-object'
 require 'data_magic'
+require 'yaml'
+
 
 if ENV['browser'] == nil
   $browser_type = :chrome

@@ -17,6 +17,12 @@ Feature: Orbitz Flight Search functionality
     Then verify user should see the available flights
     And verify user gets the flight results for the selected dep date
 
+  Scenario: verify user is able to search for the available flights for a future dates using data in yml file
+    Given user is on the orbitz homepage
+    When user search for the available flights for the future dates with yml data
+    Then verify user should see the available flights
+    And verify user gets the flight results for the selected dep date
+
   Scenario Outline: verify user is able to search for the available flights for a future dates for different destinations
     Given user is on the orbitz homepage
     When user selects the flights tab
