@@ -49,6 +49,7 @@ Then(/^user should see the "([^"]*)" error message$/) do |error_message|
 end
 
 When(/^user search for the available flights for the future dates$/) do
+
   on(OrbitzHomePage) do |page|
     page.select_flights_tab_element.click
     page.choose_round_trip_element.click
@@ -59,29 +60,28 @@ When(/^user search for the available flights for the future dates$/) do
     page.submit_button_element.click
   end
 
-  step "user selects the flights tab"
-  step "user choose round trip option"
-  step 'user search for "Columbus" city and selects "CMH" airport for departure'
-  step 'user search for "Cleveland" city and selects "CLE" airport for arrival'
-  step 'user choose future dates for the arrival and departure dates'
-  step 'search for the available flights'
-
-
-  steps %Q{
-    When user selects the flights tab
-    And user choose round trip option
-    And user search for "Columbus" city and selects "CMH" airport for departure
-    And user search for "Cleveland" city and selects "CLE" airport for arrival
-    And user choose future dates for the arrival and departure dates
-    And search for the available flights
-        }
-
+  # step "user selects the flights tab"
+  # step "user choose round trip option"
+  # step 'user search for "Columbus" city and selects "CMH" airport for departure'
+  # step 'user search for "Cleveland" city and selects "CLE" airport for arrival'
+  # step 'user choose future dates for the arrival and departure dates'
+  # step 'search for the available flights'
+  #
+  #
+  # steps %Q{
+  #   When user selects the flights tab
+  #   And user choose round trip option
+  #   And user search for "Columbus" city and selects "CMH" airport for departure
+  #   And user search for "Cleveland" city and selects "CLE" airport for arrival
+  #   And user choose future dates for the arrival and departure dates
+  #   And search for the available flights
+  #       }
 
 end
 
 When(/^user search for the available flights for the future dates with yml data$/) do
-
   @data = YAML.load_file 'features/support/test data/test_data.yml'
+  p @data['dep_city_name']
 
   on(OrbitzHomePage) do |page|
     page.select_flights_tab_element.click
@@ -92,4 +92,4 @@ When(/^user search for the available flights for the future dates with yml data$
     page.choose_arr_date 3
     page.submit_button_element.click
   end
-  end
+end

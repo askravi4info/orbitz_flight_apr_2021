@@ -40,7 +40,7 @@ class OrbitzHomePage
     end
     all_errors
   end
-
+  #RAM G
   def choose_dep_airport city_name, airport_code
     leaving_from_button_element.click
     set_dep_edit_box_element.set city_name
