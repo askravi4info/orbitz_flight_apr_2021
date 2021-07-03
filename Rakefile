@@ -6,4 +6,8 @@ Cucumber::Rake::Task.new(:features) do |t|
   t.profile = 'default'
 end
 
+Cucumber::Rake::Task.new(:smoke) do |t|
+  t.profile = 'smoke'
+end
+
 task :default => :features

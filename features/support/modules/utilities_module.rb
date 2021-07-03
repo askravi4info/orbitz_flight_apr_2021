@@ -39,5 +39,29 @@ module UtilitiesModule
     end
   end
 
+  def scroll_to_top_of_page
+    puts 'scrolled to top'
+    @browser.execute_script("window.scrollTo(0,0)") #scroll to top of page
+  end
+
+  def switch_to_tab(tab_name)
+    wait_until { @browser.windows.map(&:title).include? tab_name }
+    @browser.windows.find { |tab| tab.title == tab_name }.use
+    @browser.windows[0].use
+  end
+
+
+  def switch_to_new_tab
+    @browser.windows.last.use
+  end
+
+  # closes all but the currently active browser tab
+  def close_other_tabs
+    @browser.windows.reject { |window| window == browser.window }.each do |window|
+      window.close
+      @browser.alert.ok if @browser.alert.exists?
+    end
+  end
+
 end
 

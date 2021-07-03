@@ -1,3 +1,3 @@
-default: --no-source --color --format pretty --format html --out results.html
+default: --no-source --color --format pretty --format html --out results.html --format json --out results.json
 smoke: --no-source --color --format pretty --tags @smoke --format html --out results.html
 flights_tests: --no-source --color --format pretty --tags @flight_search --format html --out results.html

@@ -10,6 +10,19 @@ After do
   @browser.close
 end
 
+#Test Runtime Tracking
+#This will print test runtime to the console during Jenkins runs
+Around() do |_, block|
+  start = Time.now
+  block.call
+  execution_time = Time.now - start
+  puts "\n EXECUTION TIME: #{execution_time}"
+  if execution_time > 180
+    puts "\n Slow Test"
+  end
+end
+
+
 After do |scenario|
   SCREENSHOTS_DIRECTORY = "html-report"
   if scenario.failed?

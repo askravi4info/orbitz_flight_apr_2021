@@ -32,8 +32,8 @@ Feature: Orbitz Flight Search functionality
     Given user is on the orbitz homepage
     When user selects the flights tab
     And user choose round trip option
-    And user search for <dep_city_name> city and selects <dep_airport_name> airport for departure
-    And user search for <arr_city_name> city and selects <arr_airport_name> airport for arrival
+    And user search for "<dep_city_name>" city and selects "<dep_airport_name>" airport for departure
+    And user search for "<arr_city_name>" city and selects "<arr_airport_name>" airport for arrival
     And user choose future dates for the arrival and departure dates
     And search for the available flights
     Then verify user should see the available flights
@@ -43,6 +43,7 @@ Feature: Orbitz Flight Search functionality
       | Columbus      | CMH              | Cleveland     | CLE              |
       | Chicago       | ORD              | Columbus      | CMH              |
 
+    @wip
   Scenario: verify user is able to validate the mandatory search fields for flight search
     Given user is on the orbitz homepage
     When user selects the flights tab

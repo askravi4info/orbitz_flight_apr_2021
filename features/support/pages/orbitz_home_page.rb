@@ -33,7 +33,6 @@ class OrbitzHomePage
   def get_all_error_message
     # error_messages_elements.map(&:text)
 
-
     all_errors = []
     error_messages.each do |each_error|
       all_errors << each_error.text
